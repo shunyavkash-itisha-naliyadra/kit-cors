@@ -1,34 +1,40 @@
 # kit-cors
 
-`kit-cors` is a lightweight custom CORS middleware for Node.js, designed to be used with Express.js applications.
+A lightweight CORS middleware for Node.js applications. `kit-cors` provides essential Cross-Origin Resource Sharing (CORS) capabilities while maintaining a minimal footprint, making it a great alternative to the `cors` package.
 
 ## Installation
 
-You can install `kit-cors` using npm:
+Install `kit-cors` using npm:
 
 ```sh
 npm install kit-cors
+```
 
-#Usage
-To use `kit-cors` in your Express.js application, simply require it and add it as middleware:
-````javascript
-const express = require('express');
-const cors = require('kit-cors');
+## Usage
+
+### Basic Setup
+
+Import and use `kit-cors` in your Express application:
+
+```javascript
+import express from "express";
+import cors from "kit-cors";
 
 const app = express();
 
+// Enable CORS with default settings
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get("/", (req, res) => {
+  res.json({ message: "CORS enabled!" });
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+app.listen(3000, () => console.log("Server running on port 3000"));
+```
+
 ### Custom Configuration
 
-You can customize `lite-cors` by passing an options object:
+You can customize `kit-cors` by passing an options object:
 
 ```javascript
 app.use(
@@ -79,7 +85,7 @@ app.use(
 );
 ```
 
-## Why Use lite-cors?
+## Why Use kit-cors?
 
 - 🏗 **Lightweight**: Smaller and more efficient than the `cors` package.
 - 🚀 **Easy to Use**: Simple API with intuitive configuration.

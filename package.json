@@ -1,6 +1,6 @@
 {
   "name": "kit-cors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight custom CORS middleware for Node.js.",
   "main": "index.js",
   "author": "itisha-naliayadra",
